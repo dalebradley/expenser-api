@@ -17,9 +17,9 @@ type Config struct {
 // with default values.
 func DefaultConfig() Config {
 	return Config{
-		ExpenserPort: ":8888",
-		Database:     "transactions",
-		Collection:   "registered_office_address",
+		ExpenserPort: ":8080",
+		Database:     "expenser",
+		Collection:   "expenses",
 		MongoDBURL:   "mongodb://chs-mongo:27017",
 	}
 }
@@ -28,8 +28,7 @@ func DefaultConfig() Config {
 // values provided by the environment or command-line flags, or with default
 // values if none are provided.
 func Get() *Config {
-	var cfg Config
-	cfg = DefaultConfig()
+	cfg := DefaultConfig()
 	err := gofigure.Gofigure(&cfg)
 	if err != nil {
 		log.Fatal(err)
