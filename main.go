@@ -13,7 +13,7 @@ import (
 func main() {
 	cfg := conf.Get()
 	spew.Dump(cfg)
-	spew.Dump("Here we go!")
+	spew.Dump("Here we go again!")
 
 	mainRouter := mux.NewRouter()
 	mainRouter.StrictSlash(true)
