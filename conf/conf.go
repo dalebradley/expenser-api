@@ -7,7 +7,7 @@ import (
 )
 
 type Config struct {
-	ExpenserPort string `env:"EXPENSER_PORT"                    flag:"expenser-port"                    flagDesc:"Primary Expnser Server Port"`
+	ExpenserPort string `env:"EXPENSER_PORT"                flag:"expenser-port"                flagDesc:"Primary Expnser Server Port"`
 	Collection   string `env:"MONGODB_COLLECTION"           flag:"mongodb-collection"           flagDesc:"MongoDB collection for data"`
 	Database     string `env:"MONGODB_DATABASE"             flag:"mongodb-database"             flagDesc:"MongoDB database for data"`
 	MongoDBURL   string `env:"MONGODB_URL"                  flag:"mongodb-url"                  flagDesc:"MongoDB server URL"`
